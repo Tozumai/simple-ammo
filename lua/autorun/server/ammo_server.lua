@@ -6,7 +6,7 @@ hook.Add("PlayerSpawn", "AmmoCheck", function( ply, transition )
 	ply:GiveAmmo( AmmoAmount, "AR2", true)
 
 	net.Start("AmmoNotify")
-	net.WriteString("You've been given " + AmmoAmount + " ammo")
+	net.WriteString("You've been given "..AmmoAmount.." ammo")
 	net.Send( ply )
 
 end)
