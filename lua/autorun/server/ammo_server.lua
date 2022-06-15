@@ -7,5 +7,6 @@ hook.Add("PlayerSpawn", "AmmoCheck", function( ply, transition )
 
 	net.Start("AmmoNotify")
 	net.WriteString("You've been given " + AmmoAmount + " ammo")
+	net.Send( ply )
 
 end)
